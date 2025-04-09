@@ -34,6 +34,7 @@
     cursor: pointer;
 }
 
+
 /* HEADER MENU */
 
 .menu {
@@ -219,9 +220,12 @@
     color: white;
 }
 
-.modal_input, .btn_min {
+.modal_content label, .btn_min {
     width: 100% !important;
     margin-top: 10px;
+}
+.modal_content input {
+    width: 100%;
 }
 
 
