@@ -22,18 +22,18 @@ modal.onclick = (event) => {
     }
 }
 
-const autoModal = () => {
-    setInterval(() => {
-        if (modal.style.display !== 'block'){
-            openModal()
-        }
-    },10000)
-}
-autoModal()
+// const autoModal = () => {
+//     setInterval(() => {
+//         if (modal.style.display !== 'block'){
+//             openModal()
+//         }
+//     },10000)
+// }
+// autoModal()
 
-const scrollEnd = () => {
-    if (window.innerHeight + window.scrollY > document.body.offsetHeight){
-        openModal()
-    }
-}
-window.addEventListener('scroll',scrollEnd)
+// const scrollEnd = () => {
+//     if (window.innerHeight + window.scrollY > document.body.offsetHeight){
+//         openModal()
+//     }
+// }
+// window.addEventListener('scroll',scrollEnd)

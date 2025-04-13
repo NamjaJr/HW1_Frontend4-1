@@ -86,3 +86,48 @@ reset.onclick = () => {
     count = 0
     seconds.innerHTML = count
 };
+
+//ANY REQUEST
+const anyRequest = new XMLHttpRequest()
+
+anyRequest.open('GET','../data/any.json')
+anyRequest.setRequestHeader('Content-type','application/json')
+anyRequest.send()
+
+anyRequest.onload = ()  => {
+    if (anyRequest.status >= 200 && anyRequest.status < 300){
+        const data = JSON.parse(anyRequest.response)
+        console.log(data.name)
+        console.log(data.age)
+        console.log(data.position)
+        console.log(data.teams)
+    }else {
+        console.log('ERROR')
+    }
+
+}
+
+//CHARACTERS REQUEST
+
+const characters = document.querySelector('.characters-list')
+const personRequest = new XMLHttpRequest()
+personRequest.open('GET', '../data/characters.json')
+personRequest.setRequestHeader('Content-type', 'application/json')
+personRequest.send()
+
+personRequest.onload = () => {
+    const objectPerson = JSON.parse(personRequest.response)
+    objectPerson.forEach((person) => {
+        const personCard = document.createElement('div')
+        personCard.setAttribute('class', 'person-card')
+        personCard.innerHTML = `
+            <div class="person-photo">
+                <img src="${person.photo}" alt="${person.name}" class="person-img">  
+            </div>
+            <h2 class="person-name">${person.name}</h2>
+            <span class="person-age">Возраст: ${person.age} </span>
+            <h3 class="person-universe">Вселенная: ${person.universe}</h3>
+        `
+        characters.append(personCard)
+    })
+}

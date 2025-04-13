@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Seijuro Akashi",
+    "age": 17,
+    "photo": "https://i.pinimg.com/originals/45/5c/35/455c351bbd23b836e7433806c535b01b.gif",
+    "universe": "Kuroko no Basket"
+  },
+  {
+    "name": "Taiga Kagami",
+    "age": 17,
+    "photo": "https://i.pinimg.com/originals/45/c2/5a/45c25afdeb277397a1eed93ef29d7f81.gif",
+    "universe": "Kuroko no Basket"
+  },
+  {
+    "name": "Sosuke Aizen",
+    "age": 120,
+    "photo": "https://i.pinimg.com/originals/05/f0/d6/05f0d68408fc8cc72feef791fa2a24a2.gif",
+    "universe": "Bleach"
+  },
+  {
+    "name": "Ichigo Kurosaki",
+    "age": 19,
+    "photo": "https://i.pinimg.com/originals/62/92/03/6292035399b2d8cc0dd5dfcbfff8745a.gif",
+    "universe": "Bleach"
+  },
+  {
+    "name": "Noob Saibot",
+    "age": 32,
+    "photo": "https://i.pinimg.com/originals/75/c3/77/75c37706ef2cc46fad0f9f75cf2bda01.gif",
+    "universe": "Mortal Kombat"
+  },
+  {
+    "name": "Scorpion",
+    "age": 35,
+    "photo": "https://i.pinimg.com/originals/70/53/8a/70538a8b027ddda7f82e2069a0c65fb2.gif",
+    "universe": "Mortal Kombat"
+  },
+  {
+    "name": "Killua Zoldyck",
+    "age": 12,
+    "photo": "https://i.pinimg.com/originals/49/ab/24/49ab24125bf09bad9a774628b1b1fd70.gif",
+    "universe": "Hunter x Hunter"
+  },
+  {
+    "name": "Kurapika",
+    "age": 17,
+    "photo": "https://i.pinimg.com/originals/95/19/9c/95199c9834d8cbb6aa9ed73d229df5cf.gif",
+    "universe": "Hunter x Hunter"
+  }
+]

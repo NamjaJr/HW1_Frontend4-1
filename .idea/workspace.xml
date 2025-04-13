@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="733efc4d-a2ed-4b03-b37a-512a081ff1bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/any.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/characters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lesson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_works.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_works.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home_works.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +39,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Geeks/Frontend4/lesson3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Geeks/Frontend4/lesson4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -46,6 +48,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Geeks\Frontend4\project\project\photo" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -119,7 +126,18 @@
       <workItem from="1744021652748" duration="1182000" />
       <workItem from="1744027503623" duration="1992000" />
       <workItem from="1744109651329" duration="4714000" />
-      <workItem from="1744205113472" duration="2713000" />
+      <workItem from="1744205113472" duration="3432000" />
+      <workItem from="1744281061969" duration="70000" />
+      <workItem from="1744365848036" duration="359000" />
+      <workItem from="1744366302096" duration="2388000" />
+      <workItem from="1744368733677" duration="9746000" />
+      <workItem from="1744386970762" duration="619000" />
+      <workItem from="1744456654609" duration="1204000" />
+      <workItem from="1744471161826" duration="3000" />
+      <workItem from="1744471345789" duration="1395000" />
+      <workItem from="1744476083648" duration="311000" />
+      <workItem from="1744528518398" duration="829000" />
+      <workItem from="1744553626050" duration="3896000" />
     </task>
     <servers />
   </component>
