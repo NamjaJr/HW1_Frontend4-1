@@ -18,74 +18,91 @@ gmailButton.onclick = () => {
 
 const parentBlock = document.querySelector('.parent_block')
 const childBlock = document.querySelector('.child_block')
-let positionX = 0,positionY = 0
 
-const maxWidth =  parentBlock.clientWidth - childBlock.clientWidth
-const maxHeight =  parentBlock.clientHeight - childBlock.clientHeight
+const maxWidth = parentBlock.clientWidth - childBlock.clientWidth
+const maxHeight = parentBlock.clientHeight - childBlock.clientHeight
 
-let moveRight = maxWidth
-let moveTop = maxHeight
+let x = Math.random() * maxWidth
+let y = Math.random() * maxHeight
 
-const moveBlock = () => {
-    if (positionX < maxWidth){
-        positionX += 2
-        childBlock.style.left = `${positionX}px`
-        requestAnimationFrame(moveBlock)
-    }else if(positionX >= maxWidth && positionY < maxHeight){
-        positionY += 2
-        childBlock.style.top = `${positionY}px`
-        requestAnimationFrame(moveBlock)
-    }else if(positionY >= maxHeight && moveRight > 0){
-        moveRight -= 2
-        childBlock.style.left = `${moveRight}px`
-        requestAnimationFrame(moveBlock)
-    }else if (moveRight <= 0 && moveTop > 0){
-        moveTop -= 2
-        childBlock.style.top = `${moveTop}px`
-        requestAnimationFrame(moveBlock)
-    }else if(moveTop <= 0){
-        positionY = 0
-        positionX = 0
-        moveRight = maxWidth
-        moveTop = maxHeight
-        requestAnimationFrame(moveBlock)
+let dx = (Math.random() * 3 + 2) * (Math.random() > 0.5 ? 1 : -1)
+let dy = (Math.random() * 3 + 2) * (Math.random() > 0.5 ? 1 : -1)
+
+let angle = 0
+
+const moveWingman = () => {
+    x += dx
+    y += dy
+
+    if (x <= 0 || x >= maxWidth) {
+        dx *= -1
+        randomizeDirection()
+    }
+    if (y <= 0 || y >= maxHeight) {
+        dy *= -1
+        randomizeDirection()
     }
 
 
+    if (Math.random() < 0.01) {
+        randomizeDirection()
+    }
+
+    childBlock.style.left = `${x}px`
+    childBlock.style.top = `${y}px`
+
+    angle = Math.atan2(dy, dx) * (30 / Math.PI)
+    childBlock.style.transform = `rotate(${angle}deg)`
+
+    requestAnimationFrame(moveWingman)
 }
-moveBlock()
+
+function randomizeDirection() {
+    dx += (Math.random() - 0.5) * 1
+    dy += (Math.random() - 0.5) * 1
+}
+
+moveWingman()
 
 
 
-const seconds = document.querySelector('#seconds')
 
+
+const progress = document.querySelector('#progress')
 const start = document.querySelector('#start')
 const stop = document.querySelector('#stop')
 const reset = document.querySelector('#reset')
 
 let timer;
-let count = 0
+let percentage = 0
 
 start.onclick = () => {
     if (!timer){
         timer = setInterval(() => {
-            count += 1
-            seconds.innerHTML = count
-        },1000)
+            if (percentage < 100) {
+                percentage += 1
+                progress.style.width = `${percentage}%`
+                progress.innerHTML = `${percentage}%`
+            } else {
+                clearInterval(timer)
+                timer = null
+            }
+        }, 100)
     }
 }
 
 stop.onclick = () => {
     clearInterval(timer)
-    timer = 0
+    timer = null
 }
 
 reset.onclick = () => {
     clearInterval(timer)
     timer = null
-    count = 0
-    seconds.innerHTML = count
-};
+    percentage = 0
+    progress.style.width = `0%`
+    progress.innerHTML = `0%`
+}
 
 //ANY REQUEST
 const anyRequest = new XMLHttpRequest()

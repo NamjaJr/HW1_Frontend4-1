@@ -61,3 +61,44 @@ const auto = () => {
     },3000)
 }
 auto()
+
+
+//CONVERTER
+
+const somInput = document.querySelector('#som')
+const usdInput = document.querySelector('#usd')
+const krwInput = document.querySelector('#krw')
+
+
+const converter = (element,targetElement,targetElement2) => {
+    element.oninput = () => {
+        const request = new XMLHttpRequest()
+        request.open('GET','../data/converter.json')
+        request.setRequestHeader('Content-type','application/json')
+        request.send()
+
+        request.onload = () => {
+            const data = JSON.parse(request.response)
+            if (element.id === "som") {
+                targetElement.value = (element.value / data.usd).toFixed(2);
+                targetElement2.value = (element.value / data.krw).toFixed(2);
+            }
+            if (element.id === "usd") {
+                targetElement.value = (element.value * data.usd).toFixed(2);
+                targetElement2.value = ((element.value * data.usd) / data.krw).toFixed(2);
+            }
+            if (element.id === "krw") {
+                targetElement.value = (element.value * data.krw).toFixed(2);
+                targetElement2.value = ((element.value * data.krw) / data.usd).toFixed(2);
+            }
+            if (element.value === "") {
+                targetElement.value = "";
+                targetElement2.value = "";
+            }
+        }
+    }
+}
+converter(somInput,usdInput,krwInput)
+converter(usdInput,somInput,krwInput)
+converter(krwInput,somInput,usdInput)
+
